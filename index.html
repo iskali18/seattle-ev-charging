@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S8ZHF54ET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S8ZHF54ET');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>EV Charging in Austin, TX | Live PlugShare Map</title>
+  <meta name="description" content="A professional guide to EV charging in Austin, Texas — including a live PlugShare map and practical local considerations." />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EV Charging in Austin, TX" />
+  <meta property="og:description" content="Live EV charging map for Austin, Texas." />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-link" href="/">AustinEVCharging.com</a>
+        <small class="brand-sub">EV charging map • Austin metro</small>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#map">Map</a>
+        <a href="#about">About</a>
+        <button class="share-btn" type="button" id="shareBtn" aria-label="Share this page">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <circle cx="18" cy="5" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <circle cx="6" cy="12" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <circle cx="18" cy="19" r="2" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <line x1="8" y1="11" x2="16" y2="6" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="8" y1="13" x2="16" y2="18" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </button>        
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>EV Charging in Austin</h1>
+
+        <p class="lede">
+          EV charging infrastructure across the Austin area continues to expand, supporting daily commuting and regional travel throughout Central Texas.
+          This page provides a live overview of public charging locations and connector types using PlugShare’s embedded map.
+        </p>
+
+        <div class="hero-meta" aria-label="Site status">
+          <span class="badge">Live map</span>
+          <span class="muted">Additional pages coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="map">
+      <div class="container">
+        <div class="section-head">
+          <h2>Public EV Charging Locations</h2>
+          <p class="muted">
+            Explore public charging options across Austin using the embedded PlugShare map below.
+          </p>
+        </div>
+
+        <div class="map-card" role="region" aria-label="PlugShare map embed">
+          <iframe
+            title="PlugShare EV charging map - Austin, Texas"
+            src="https://www.plugshare.com/widget2.html?latitude=30.2672&longitude=-97.7431&zoom=11&hidden=power,plug_type,network,restrictions&default_plugs=J1772,Tesla,CHAdeMO,CCS-COMBO,NEMA520,NEMA1450"
+            loading="lazy"
+            allow="geolocation"
+            style="width:100%; height:600px; border:0;">
+          </iframe>
+
+          <div class="map-footer">
+            <p class="muted small">
+              Prefer full screen? <a class="inline-link" href="https://www.plugshare.com/" target="_blank" rel="noopener noreferrer">Open PlugShare</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About This Resource</h2>
+        </div>
+
+        <div class="card">
+          <p>
+            AustinEVCharging.com is an independent informational resource focused on EV charging across Austin and nearby communities.
+            Charger availability, pricing, and site access details can change and should be confirmed through the original listing or network provider.
+          </p>
+          <p class="muted small">
+            This site provides general informational content only and does not offer electrical contracting services or professional engineering advice.
+            For installation, permitting, or code compliance guidance, consult a licensed electrician and the appropriate local jurisdiction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="small muted">© <span id="year"></span> AustinEVCharging.com • Informational resource</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    Link copied
+  </div>
+
+  <script>
+  (function(){
+    const btn = document.getElementById('shareBtn');
+    const toast = document.getElementById('toast');
+    if (!btn) return;
+
+    const cleanUrl = window.location.origin + window.location.pathname;
+
+    btn.addEventListener('click', async () => {
+      try{
+        if (navigator.share) {
+          await navigator.share({
+            title: document.title,
+            text: 'EV charging map and local guide.',
+            url: cleanUrl
+          });
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(cleanUrl);
+          showToast();
+        }
+      } catch(e){}
+    });
+
+    function showToast(){
+      if(!toast) return;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 1500);
+    }
+  })();
+</script>
+  
+</body>
+</html>

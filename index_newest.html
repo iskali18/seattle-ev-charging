@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin EV Charging Stations – Live Map 2025</title>
+    <meta name="description" content="Real-time map of public EV charging stations in Austin, Texas – Tesla Superchargers, Electrify America, ChargePoint, EVgo and more.">
+    <style>
+        body { margin:0; padding:20px; font-family:system-ui,Arial,sans-serif; background:#0f172a; color:#e2e8f0; }
+        h1 { text-align:center; color:#60a5fa; margin-bottom:8px; }
+        h2 { text-align:center; color:#bfdbfe; margin-top:32px; }
+        p { text-align:center; margin-bottom:30px; }
+        p.left { text-align:left; max-width:800px; margin:0 auto 16px auto; }
+        .map-container { width:100%; height:85vh; border:none; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.5); }
+        .charger-list { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin:24px 0; }
+        .charger-item { background:#020617; padding:16px; border-radius:12px; max-width:260px; box-shadow:0 2px 10px rgba(0,0,0,0.4); }
+        .btn { display:inline-block; margin-top:8px; padding:8px 12px; border-radius:999px; border:1px solid #60a5fa; text-decoration:none; font-size:0.9em; }
+        .btn:hover { background:#1d4ed8; color:#e2e8f0; }
+        footer { text-align:center; margin-top:30px; font-size:0.9em; color:#94a3b8; }
+        a { color:#60a5fa; }
+        ul { max-width:800px; margin:0 auto 24px auto; }
+    </style>
+</head>
+<body>
+    <h1>Austin EV Charging – Public Charging Stations & EV Resources</h1>
+    <p>View public EV charging locations in Austin and access details on local incentives, home charging options, and EV programs available in Texas.</p>
+
+    <section>
+      <h2>EV Charging in Austin, Texas</h2>
+      <p class="left">
+        Austin has one of the most active and fast-growing EV communities in the country. Whether you're commuting daily, driving downtown, or traveling across Central Texas, reliable public EV charging is essential. This page provides an easy way to explore public EV charging stations around Austin using the interactive map below. Stations include a mix of Level 2 chargers and fast DC chargers operated by networks such as ChargePoint, EVgo, Tesla, and others.
+      </p>
+      <p class="left">
+        Austin Energy continues to expand its EV charging infrastructure through its Plug-In Austin program, offering public charging options across the city. Many stations are located at shopping centers, garages, hotels, workplaces, and other high-traffic destinations. Availability and charging speed can vary based on network and location, so checking real-time status before arriving is always helpful.
+      </p>
+      <p class="left">
+        For drivers interested in faster daily charging at home, installing a Level 2 charger can reduce charging times dramatically. Below the map, you'll find several popular home chargers along with links to helpful programs and incentives available in Austin. Whether you're charging in public or preparing your home for EV ownership, this page aims to organize the key resources Austin EV drivers need.
+      </p>
+    </section>
+    
+    <iframe class="map-container" 
+            src="https://www.plugshare.com/widget2.html?latitude=30.2672&longitude=-97.7431&zoom=11&hidden=power,plug_type,network,restrictions&default_plugs=J1772,Tesla,CHAdeMO,CCS-COMBO,NEMA520,NEMA1450" 
+            frameborder="0" allowfullscreen>
+    </iframe>
+
+    <div style="text-align:center; margin-top:10px; font-size:0.85em; color:#94a3b8;">
+        Map powered by <a href="https://www.plugshare.com/">PlugShare</a> — the most complete EV charging database
+    </div>
+
+    <section>
+      <h2>Popular Home EV Chargers (2025)</h2>
+
+      <div class="charger-list">
+        <div class="charger-item">
+          <h3>Wallbox Pulsar Plus</h3>
+          <p>Compact Level 2 charger with WiFi control and flexible installation options.</p>
+          <a href="#" class="btn">See Price</a>
+        </div>
+
+        <div class="charger-item">
+          <h3>Emporia Level 2 Charger</h3>
+          <p>Budget-friendly 48A charger with energy monitoring and smart scheduling.</p>
+          <a href="#" class="btn">See Price</a>
+        </div>
+
+        <div class="charger-item">
+          <h3>JuiceBox 40</h3>
+          <p>Reliable smart charger with app control, scheduling, and load management features.</p>
+          <a href="#" class="btn">See Price</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Austin EV Charging Resources</h2>
+      <ul>
+        <li><a href="https://austinenergy.com/ae/green-power/plug-in-austin" target="_blank">Austin Energy Plug-In Austin Public Charging Program</a></li>
+        <li><a href="https://austinenergy.com/ae/green-power/ev-rebates" target="_blank">Austin Energy Home Charger Rebates</a></li>
+        <li><a href="https://www.electrifyamerica.com/locate-charger/" target="_blank">Electrify America Charging Map</a></li>
+        <li><a href="https://www.evgo.com/charging-locations/" target="_blank">EVgo Fast Charging Locations</a></li>
+        <li><a href="https://www.tesla.com/findus" target="_blank">Tesla Supercharger & Destination Chargers</a></li>
+        <li><a href="https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit" target="_blank">Federal IRS 30C Charging Equipment Credit</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 AustinEVCharging.com</p>
+      <p><a href="/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

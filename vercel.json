@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/ads.txt",
+      "destination": "https://srv.adstxtmanager.com/81260/austinevcharging.com",
+      "permanent": false
+    }
+  ]
+}
